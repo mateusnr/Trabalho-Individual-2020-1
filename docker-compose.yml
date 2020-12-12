@@ -34,6 +34,19 @@ services:
     networks:
       - backend
 
+  client:
+    build:
+      context: .
+      dockerfile: ./client/Dockerfile
+    container_name: client
+    ports:
+      - 8080:8080
+    volumes:
+      - ./client:/opt/app/client
+      - node_modules:/opt/app/client/node_modules
+    env_file: .env
+    environment:
+      NODE_ENV: ${NODE_ENV}
 
 networks:
   backend:
