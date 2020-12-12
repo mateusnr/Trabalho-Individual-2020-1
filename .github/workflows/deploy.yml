@@ -17,7 +17,7 @@ jobs:
         run: docker-compose up --build -d
 
       - name: api_testing
-        run: docker-compose run -e "RAILS_ENV=testing" --rm api
+        run: docker-compose run -e "RAILS_ENV=test" --rm api
 
       - name: client_testing 
         run: docker-compose run -e "NODE_ENV=testing" --rm client 
