@@ -10,7 +10,7 @@ rake db:migrate
 if [ "$RAILS_ENV" = "development" ]
 then
     rails server -p 3000 -b 0.0.0.0
-elif [ "$RAILS_ENV" = "test" ]
+elif [ "$RAILS_ENV" = "testing" ]
 then
     rake test
 fi
