@@ -25,4 +25,4 @@ docker-compose run -e "NODE_ENV=testing" --rm client
 ### Integração contínua
 
 Foi utilizado o Github Actions para fazer a build e os testes do front e da api
-O code climate é utilizado para geração de métricas
+o SonarCloud é utilizado nos pull requests para análise do código
